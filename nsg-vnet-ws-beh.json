@@ -181,9 +181,9 @@
          "westus2": "40.83.178.242/32"
       },
       "controlPlaneIp": "[variables('azureRegionToControlPlaneIp')[resourceGroup().location]]",
-      "privateSubnetCidr": "[concat(parameters('vnetAddressPrefix'), '.64.0/18')]",
-      "publicSubnetCidr": "[concat(parameters('vnetAddressPrefix'), '.0.0/18')]",
-      "vnetCidr": "[concat(parameters('vnetAddressPrefix'), '.0.0/16')]",
+      "privateSubnetCidr": "[concat(parameters('vnetAddressPrefix'), '.192.0/20')]",
+      "publicSubnetCidr": "[concat(parameters('vnetAddressPrefix'), '.208.0/20')]",
+      "vnetCidr": "[concat(parameters('vnetAddressPrefix'), '.192.0/18')]",
       "nsgId": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('nsgName'))]",
       "vnetId": "[resourceId('Microsoft.Network/virtualNetworks', parameters('vnetName'))]",
       "managedResourceGroupId": "[concat(subscription().id, '/resourceGroups/', variables('managedResourceGroupName'))]",
