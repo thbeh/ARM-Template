@@ -150,13 +150,13 @@
             "ManagedResourceGroupId": "[variables('managedResourceGroupId')]",
             "parameters": {
                "customVirtualNetworkId": {
-                  "value": "[variables('vnetId')]",
+                  "value": "/subscriptions/425c71e4-996b-4d5e-b121-3eaf79ae04f4/resourceGroups/analytics-network-dev-rg/providers/Microsoft.Network/virtualNetworks/analytics-dev-vnet",
                },
                "customPublicSubnetName": {
-                  "value": "[parameters('publicSubnetName')]",
+                  "value": "z-ds-development-databricks-public-subnet",
                },
                "customPrivateSubnetName": {
-                  "value": "[parameters('privateSubnetName')]",
+                  "value": "z-ds-development-databricks-private-subnet",
                }
             }
          }
