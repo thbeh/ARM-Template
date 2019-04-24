@@ -1,7 +1,8 @@
 #!/bin/bash
-add-apt-repository ppa:webupd8team/java
+add-apt-repository ppa:linuxuprising/java -y
 apt-get-update
-apt-get install oracle-java8-installer
+echo oracle-java11-installer shared/accepted-oracle-license-v1-2 select true | sudo /usr/bin/debconf-set-selections
+# apt-get install oracle-java8-installer
 
 cd /usr/local
 
