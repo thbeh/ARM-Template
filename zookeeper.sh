@@ -2,7 +2,7 @@
 # add-apt-repository ppa:linuxuprising/java -y
 # apt-get-update
 # echo oracle-java11-installer shared/accepted-oracle-license-v1-2 select true | sudo /usr/bin/debconf-set-selections
-apt-get install openjdk-8-jdk
+apt-get install openjdk-8-jdk -y
 
 cd /usr/local
 
