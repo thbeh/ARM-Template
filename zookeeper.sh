@@ -42,3 +42,4 @@ drill.exec: {
 }
 EOF
 
+apache-drill-1.15.0/bin/drillbit.sh start
