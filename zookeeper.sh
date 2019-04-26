@@ -37,7 +37,7 @@ mv apache-drill-1.15.0/conf/drill-override.conf apache-drill-1.15.0/conf/drill-o
 
 cat << EOF >> apache-drill-1.15.0/conf/drill-override.conf 
 drill.exec: {
-	cluster-id: "zdsdrillcluster"
+	cluster-id: "zdsdrillcluster",
 	zk.connect: "10.140.193.36:2181,10.140.193.37:2181,10.140.193.38:2181"
 }
 EOF
