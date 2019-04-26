@@ -35,7 +35,7 @@ zookeeper-3.4.14/bin/zkServer.sh start
 
 mv apache-drill-1.15.0/conf/drill-override.conf apache-drill-1.15.0/conf/drill-override.bak
 
-cat < EOF > apache-drill-1.15.0/conf/drill-override.conf 
+cat << EOF >> apache-drill-1.15.0/conf/drill-override.conf 
 drill.exec: {
 	cluster-id: "zdsdrillcluster"
 	zk.connect: "10.140.193.36:2181,10.140.193.37:2181,10.140.193.38:2181"
