@@ -10,7 +10,6 @@ wget https://www-eu.apache.org/dist/zookeeper/stable/zookeeper-3.4.14.tar.gz
 wget https://www-us.apache.org/dist/drill/drill-1.15.0/apache-drill-1.15.0.tar.gz
 
 tar -xvf "zookeeper-3.4.14.tar.gz"
-tar -zxvf "apache-drill-1.15.0.tar.gz"
 
 touch zookeeper-3.4.14/conf/zoo.cfg
 
@@ -32,6 +31,13 @@ mkdir -p /var/lib/zookeeper
 echo $(($1+1)) >> /var/lib/zookeeper/myid
 
 zookeeper-3.4.14/bin/zkServer.sh start
+
+wget https://www-us.apache.org/dist/drill/drill-1.15.0/apache-drill-1.15.0.tar.gz
+wget http://central.maven.org/maven2/org/apache/hadoop/hadoop-azure/2.7.7/hadoop-azure-2.7.7.jar
+wget http://central.maven.org/maven2/com/microsoft/azure/azure-storage/8.0.0/azure-storage-8.0.0.jar
+
+tar -zxvf "apache-drill-1.15.0.tar.gz"
+cp *.jar apache-drill-1.15.0/jars/3rdparty/
 
 mv apache-drill-1.15.0/conf/drill-override.conf apache-drill-1.15.0/conf/drill-override.bak
 
